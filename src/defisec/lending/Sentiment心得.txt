@@ -1,0 +1,7 @@
+如果报错，trace太长，根本看不到具体哪个方法报错的。这时想到了PhaIcon fork的作用(可惜只支持eth,matic,bsc)。
+fork前一个区块，把url放到foudnry的配置，执行报错代码。然后在fork的浏览器scan看具体的trace
+
+2 trace太长，把几个log方法都注释掉。这样就注释掉了所有的打印。简介了很多
+3 错误代码去掉#505，拿505去代码中搜索，一定能找到。
+4 调用过程中的require和revert看一定有。
+5 try catch 打印msg，能定位具体报错的方法，日志会稍微的详细点。是
